@@ -1,12 +1,14 @@
 import mongoose from "mongoose";
 
-//defining schema
+//defining adminschema
 const AdminSchema = new mongoose.Schema({
     email: { type: String, required: true, trim: true }, // Corrected 'trime' to 'trim'
     password: { type: String, required: true },
     createdAt: { type: Date, default: Date.now }, // Automatically set to current date and time
     isActive: { type: Boolean, default: false } // Boolean value with default set to true
 });
+
+
 
 //model
 
