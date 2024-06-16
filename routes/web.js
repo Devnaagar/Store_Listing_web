@@ -3,6 +3,10 @@ const router = express.Router();
 
 import Admin from "../controller/admin/Admin.js";
 import Dashboard from "../controller/admin/Dashboard.js";
+import City from "../controller/admin/City.js";
+import Store from "../controller/admin/Store.js";
+// import CityModel from "../model/city.js";
+
 
 router.get('/', (req, res) => {
 
@@ -22,9 +26,19 @@ router.post('/logout', (req, res) => {
         res.redirect('/admin');
     });
 });
+router.get('/city', City.getAllDoc);
+router.get('/add_city', City.add_form);
+router.post('/city', City.add_city);
+router.get('/edit_city/:id',City.editDoc);
+router.post('/update_city/:id',City.updateDocbyID);
+router.post('/delete_city/:id',City.deleteDocbyID);
+router.post('/status', City.changestatus);
+router.get('/store', Store.getAllDoc);
+router.get('/add_store', Store.city_info);
+router.get('/add_store', Store.add_form);
+router.post('/store', Store.add_store);
+
+
 // router.post('/',StudentController.createDoc);
-// router.get('/edit/:id',StudentController.editDoc);
-// router.post('/update/:id',StudentController.updateDocbyID);
-// router.post('/delete/:id',StudentController.deleteDocbyID);
 
 export default router;

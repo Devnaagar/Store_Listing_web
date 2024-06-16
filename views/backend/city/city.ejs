@@ -1,0 +1,91 @@
+<%- include('../../defualts/header.ejs') %>
+<div class="container">
+    <div class="page-inner">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h4 class="card-title">City</h4>
+                        <form method="get" action="/admin/add_city">
+                            <button class="btn btn-primary btn-round">
+                                <i class="fa fa-plus"></i>
+                                Add city
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table id="add-row" class="display table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>S.no</th>
+                                    <th>City</th>
+                                    <th>Country</th>
+                                    <th>Status</th>
+                                    <th style="width: 10%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% var i =1 %>
+                                <% data.forEach(item => { %>
+                                    <tr>
+                                        <th scope="row"><%= i++ %></th>
+                                        <td><%= item.city_name %></td>
+                                        <td><%= item.country_name %></td>
+                                        <td class="form-switch">
+                                            <input class="form-check-input ms-3" type="checkbox" role="switch" data-id="<%= item._id %>" data-status="<%= item.status %>" <%= item.status ? 'checked' : '' %>>
+                                        </td>
+                                        <td>
+                                            <div class="icon d-flex justify-content-between">
+                                                <form method="get" action="/admin/edit_city/<%= item._id%>">
+                                                    <button class="btn" type="submit">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    </button>
+                                                </form>
+                                                <form method="post" action="/admin/delete_city/<%= item._id%>">
+                                                    <button class="btn" type="submit">
+                                                        <i class="fa-solid fa-trash"></i>
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                <% }); %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Event delegation to handle switch input change
+        $('tbody').on('change', '.form-check-input', function() {
+            const id = $(this).data('id');
+            const newStatus = $(this).is(':checked');
+
+            // Send AJAX request to toggle status
+            $.ajax({
+                url: '/admin/status',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ id: id, status: newStatus }),
+                success: function(response) {
+                    if (!response.success) {
+                        alert('Failed to update status');
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+
+
+
+
+<%- include('../../defualts/footer.ejs') %> 

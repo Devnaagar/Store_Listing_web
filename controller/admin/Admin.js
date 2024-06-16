@@ -1,20 +1,20 @@
 
-import AdminModel from "../../model/store_all.js";
+import AdminModel from "../../model/admin.js";
 
 class Admin {
     static login = async (req, res) => {
         const {email, password } = req.body;
-        console.log(password);
+        // console.log(password);
 
         try {
             const admin = await AdminModel.findOne({ email:email});
-            console.log(admin.password);
+            // console.log(admin.password);
 
             if (admin) {
                 // Compare passwords (assuming they are stored in plain text)
                 if (password === admin.password) {
                     req.session.adminId =  admin._id.toString();
-                    console.log(req.session.adminId)
+                    // console.log(req.session.adminId)
                     res.redirect('/admin/dashboard');
                 } else {
                     res.render("backend/admin/login.ejs", { error: 'Invalid password' });
