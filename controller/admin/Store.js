@@ -18,7 +18,7 @@ class store_Info{
         } catch (error) {
             // console.log("here7")
             console.log(error);
-            res.status(500).send('Internal server error');
+            res.status(500).send('Internal server error occured');
         }
     }
 
@@ -58,10 +58,8 @@ class store_Info{
 
     static getAllDoc = async (req,res) =>{
         if (!req.session.adminId) {
-            // console.log("here2");
             return res.redirect('/admin');
         }
-        // console.log("here")
         try {
             const stores = await StoreModel.find().populate('city_ref').exec();
             // const cities = await CityModel.find().exec();
