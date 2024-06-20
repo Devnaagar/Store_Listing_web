@@ -26,13 +26,19 @@ router.post('/logout', (req, res) => {
         res.redirect('/admin');
     });
 });
+
+//city
 router.get('/city', City.getAllDoc);
 router.get('/add_city', City.add_form);
 router.post('/city', City.add_city);
 router.get('/edit_city/:id',City.editDoc);
 router.post('/update_city/:id',City.updateDocbyID);
 router.post('/delete_city/:id',City.deleteDocbyID);
+
+//common
 router.post('/status', City.changestatus);
+
+//stores
 router.get('/store', Store.getAllDoc);
 router.get('/add_store', Store.city_info);
 router.get('/add_store', Store.add_form);
