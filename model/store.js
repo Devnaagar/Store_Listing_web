@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 //defining cityschema
 const StoreSchema = new mongoose.Schema({
     store_name: {type:String , required :true , trim: true},
-    city_ref: {type:String , required :true , trim: true},
+    city_ref: {type: mongoose.Schema.Types.ObjectId, ref: 'cities'},
     address:{type:String,required:true,trim:true},
     latitude:{type:String,required:true,trim:true},
     longitude:{type:String,required:true,trim:true},

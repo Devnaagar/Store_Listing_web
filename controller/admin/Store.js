@@ -62,7 +62,7 @@ class store_Info{
         }
         try {
             const stores = await StoreModel.find().populate('city_ref').exec();
-            // const cities = await CityModel.find().exec();
+            //const cities = await CityModel.find('city_ref').exec();
 
             // console.log("here5")
             res.render("backend/store/store.ejs",{ stores});
