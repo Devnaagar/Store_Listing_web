@@ -5,6 +5,9 @@ import Admin from "../controller/admin/Admin.js";
 import Dashboard from "../controller/admin/Dashboard.js";
 import City from "../controller/admin/City.js";
 import Store from "../controller/admin/Store.js";
+// import { jsx } from 'react/jsx-runtime';
+// import  jsx  from "jsx";
+
 // import CityModel from "../model/city.js";
 
 
@@ -45,6 +48,6 @@ router.get('/add_store', Store.add_form);
 router.post('/store', Store.add_store);
 
 
-// router.post('/',StudentController.createDoc);
+
 
 export default router;
