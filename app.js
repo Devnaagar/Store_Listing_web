@@ -5,12 +5,11 @@ import session from 'express-session';
 import bodyParser from "body-parser";
 import web from './routes/web.js';
 const app = express();
-const port = process.env.PORT || '3111';
+const port = process.env.PORT || '3110';
 const DATABASE_URL=process.env.DATABASE_URL || "mongodb://127.0.0.1:27017";
 
 // database connection 
 connectDB(DATABASE_URL);
-
 //handle submission
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -26,11 +25,16 @@ app.use(session({
 //static files
 app.use(express.static(join(process.cwd(),"public")));
 
+app.use(express.static(join(process.cwd(),'frontend','build')));
+
 //set template engine
 app.set("view engine","ejs");
 app.set('views', './views');
 
-//load routes
+// load routes
+app.get('/main', (req, res) => {
+  res.sendFile(join(process.cwd(), 'frontend', 'build', 'index.html'));
+});
 app.use("/admin",web);
 
 app.listen(port,()=>{
