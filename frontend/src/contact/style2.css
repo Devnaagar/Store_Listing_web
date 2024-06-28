@@ -1,0 +1,41 @@
+.contact2_div{
+    background-color: rgb(228, 225, 225);
+}
+
+.contact_sub_div{
+    height: 150px;
+    width: 348px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px 0;
+}
+
+
+.contact_icon{
+    font-size: 30px;
+    color: rgb(108, 42, 20);
+}
+
+.contact_info{
+    font-family: "DM Serif Display", serif;
+
+}
+
+.touch_box{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.button_send{
+    background-color: red;
+    height: 50px;
+    width: 100px;
+    color: white;
+    font-size: 20px;
+}
+
+.button_send:hover{
+    background-color: black;
+    color: white;
+    transition: ease-in 0.7s ;
+}

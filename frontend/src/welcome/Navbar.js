@@ -15,10 +15,10 @@ function Navbar(){
                                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex justify-content-evenly w-100">
                                         <li className="nav-item d-flex align-items-center">
-                                            <a className="nav-link d-flex align-items-center" aria-current="page" href="#"><b><h6 className='nav_change m-0'>WELCOME</h6></b></a>
+                                            <a className="nav-link d-flex align-items-center" aria-current="page" href="/"><b><h6 className='nav_change m-0'>WELCOME</h6></b></a>
                                         </li>
                                         <li className="nav-item d-flex align-items-center">
-                                            <a className="nav-link d-flex align-items-center" href="#"><b><h6 className='nav_change m-0'>ABOUT US</h6></b></a>
+                                            <a className="nav-link d-flex align-items-center" href="/about"><b><h6 className='nav_change m-0'>ABOUT US</h6></b></a>
                                         </li>
                                         <li className="nav-item">
                                             <a className="nav-link p-0" href="#">
@@ -29,7 +29,7 @@ function Navbar(){
                                             <a className="nav-link d-flex align-items-center" href="#"><b><h6 className='nav_change m-0'>STORE LOCATION</h6></b></a>
                                         </li>
                                         <li className="nav-item d-flex align-items-center">
-                                            <a className="nav-link d-flex align-items-center" href="#"><b><h6 className='nav_change m-0'>CONTACT US</h6></b></a>
+                                            <a className="nav-link d-flex align-items-center" href="/contact"><b><h6 className='nav_change m-0'>CONTACT US</h6></b></a>
                                         </li>
                                     </ul>
                                 </div>
