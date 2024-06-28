@@ -1,0 +1,44 @@
+.about_div{
+    background-image: url(./photos/breadcrumb.jpg);
+}
+
+.about_div .container{
+    padding: 200px 50px;
+}
+
+.about2_div{
+
+    padding: 60px 10px;
+    background-color: rgb(228, 225, 225);
+}
+.div_head{
+    font-family: "DM Serif Display", serif;
+    margin: 10px 0;
+}
+
+.para_about{
+    color: rgb(130, 125, 125);
+}
+
+.about2_sect{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.about2_img{
+    border-radius: 20px;
+    box-shadow: rgba(255, 255, 255, 0.5) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+}
+
+.vision_box{
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.list_item_vision{
+    color: rgb(130, 125, 125);
+    font-size: 20px;
+}
