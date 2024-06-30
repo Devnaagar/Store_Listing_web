@@ -1,0 +1,24 @@
+.store_div{
+    background-image: url(./photo/breadcrumb.jpg);
+}
+.store_div .container{
+    padding: 200px 50px;
+}
+
+.map_div{
+    padding: 30px 0;
+    border-radius: 20px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.store_info_div{
+    background-color: aliceblue;
+
+}
+
+.store_sub_head{
+    font-family: "DM Serif Display", serif;
+
+}

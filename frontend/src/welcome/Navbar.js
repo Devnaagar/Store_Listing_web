@@ -26,7 +26,7 @@ function Navbar(){
                                             </a>
                                         </li>
                                         <li className="nav-item d-flex align-items-center">
-                                            <a className="nav-link d-flex align-items-center" href="#"><b><h6 className='nav_change m-0'>STORE LOCATION</h6></b></a>
+                                            <a className="nav-link d-flex align-items-center" href="/stores"><b><h6 className='nav_change m-0'>STORE LOCATION</h6></b></a>
                                         </li>
                                         <li className="nav-item d-flex align-items-center">
                                             <a className="nav-link d-flex align-items-center" href="/contact"><b><h6 className='nav_change m-0'>CONTACT US</h6></b></a>

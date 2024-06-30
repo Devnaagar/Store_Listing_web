@@ -14,13 +14,13 @@ function Contact3(){
                                     <div className='col-lg-6'>
                                         <div className='form-group p-4'>
                                             <label className='form-label' for="name"><h4>Name</h4></label>
-                                            <input className='form-control' name='name' id='name'/>
+                                            <input className='form-control' name='name' id='name' placeholder='Enter your Name'/>
                                         </div>
                                     </div>
                                     <div className='col-lg-6'>
                                         <div className='form-group p-4'>
                                             <label className='form-label' for="phone"><h4>Phone</h4></label>
-                                            <input className='form-control' name='phone' id='phone'/>
+                                            <input className='form-control' name='phone' id='phone' placeholder='Enter your Phone number'/>
                                         </div>
                                     </div>
                                 </div>
@@ -28,7 +28,7 @@ function Contact3(){
                                     <div className='col-lg-12'>
                                         <div className='form-group p-4'>
                                             <label className='form-label' for="email"><h4>Email</h4></label>
-                                            <input className='form-control' name='email' id='email'/>
+                                            <input className='form-control' name='email' id='email' placeholder='Enter your email'/>
                                         </div>
                                     </div>
                                 </div>
@@ -36,7 +36,7 @@ function Contact3(){
                                     <div className='col-lg-12'>
                                         <div className='form-group p-4'>
                                             <label className='form-label' for="desc"><h4>Description</h4></label>
-                                            <textarea className='form-control' rows={10} name='desc' id='desc'/>
+                                            <textarea className='form-control' rows={10} name='desc' id='desc' placeholder='description.....'/>
                                         </div>
                                     </div>
                                 </div>

@@ -128,6 +128,20 @@ class store_Info{
 
         res.redirect("/admin/city");
     }
+
+    static display_data= async (req, res) => {
+        try {
+            const stores = await StoreModel.find({});
+            const formattedStores = stores.map(store => ({
+                name: store.store_name,
+                latitude: parseFloat(store.latitude),
+                longitude: parseFloat(store.longitude)
+            }));
+            res.json(formattedStores);
+        } catch (err) {
+            res.status(500).send(err);
+        }
+    };
 }
 
 export default store_Info;
