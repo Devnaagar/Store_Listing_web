@@ -4,9 +4,11 @@ import {join} from 'path';
 import session from 'express-session';
 import bodyParser from "body-parser";
 import web from './routes/web.js';
+import cors from 'cors';
 const app = express();
 const port = process.env.PORT || '3110';
 const DATABASE_URL=process.env.DATABASE_URL || "mongodb://127.0.0.1:27017";
+app.use(cors());
 
 // database connection 
 connectDB(DATABASE_URL);

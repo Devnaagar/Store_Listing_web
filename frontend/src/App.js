@@ -11,6 +11,7 @@ import {
 import Home from "./Home";
 import Aboutus from './Aboutus';
 import Contactus from "./Contactus";
+import Store from "./Store";
 
 // import Blogs from "./pages/blogs";
 // import SignUp from "./pages/signup";
@@ -27,8 +28,8 @@ function App() {
 					path="/contact"
 					element={<Contactus />}
 				/>
-				{/* <Route path="/blogs" element={<Blogs />} />
-				<Route
+				<Route path="/stores" element={<Store />} />
+				{/* <Route
 					path="/sign-up"
 					element={<SignUp />}
 				/> */}

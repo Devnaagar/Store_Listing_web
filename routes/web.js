@@ -46,6 +46,7 @@ router.get('/store', Store.getAllDoc);
 router.get('/add_store', Store.city_info);
 router.get('/add_store', Store.add_form);
 router.post('/store', Store.add_store);
+router.get('/stores_data',Store.display_data);
 
 
 
