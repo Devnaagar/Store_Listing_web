@@ -3,9 +3,7 @@ import StoreModel from "../../model/store.js";
 
 
 
-class store_Info{
-
-
+class Store{
     static add_form = async (req,res) =>{
         if (!req.session.adminId) {
             // console.log("here2");
@@ -130,6 +128,7 @@ class store_Info{
     }
 
     static display_data= async (req, res) => {
+        // console.log("helooo");
         try {
             const stores = await StoreModel.find({});
             const formattedStores = stores.map(store => ({
@@ -137,6 +136,7 @@ class store_Info{
                 latitude: parseFloat(store.latitude),
                 longitude: parseFloat(store.longitude)
             }));
+            // console.log(formattedStores);
             res.json(formattedStores);
         } catch (err) {
             res.status(500).send(err);
@@ -144,4 +144,4 @@ class store_Info{
     };
 }
 
-export default store_Info;
+export default Store;
