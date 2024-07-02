@@ -33,7 +33,7 @@ const MapComponent = () => {
                 <div className='row'>
                     <div className='col-lg-12'>
                         <div className='map_div'>
-                            <MapContainer center={[28.619702, 77.314677]} zoom={13} style={{ height: '100vh', width: '90%' } }>
+                            <MapContainer center={[20.5937, 78.9629]} zoom={4} style={{ height: '100vh', width: '90%' }}>
                                 <TileLayer
                                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

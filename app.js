@@ -34,7 +34,7 @@ app.set("view engine","ejs");
 app.set('views', './views');
 
 // load routes
-app.get('/main', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(join(process.cwd(), 'frontend', 'build', 'index.html'));
 });
 app.use("/admin",web);

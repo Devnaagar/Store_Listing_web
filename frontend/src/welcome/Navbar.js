@@ -21,7 +21,7 @@ function Navbar(){
                                             <a className="nav-link d-flex align-items-center" href="/about"><b><h6 className='nav_change m-0'>ABOUT US</h6></b></a>
                                         </li>
                                         <li className="nav-item">
-                                            <a className="nav-link p-0" href="#">
+                                            <a className="nav-link p-0" href="/main">
                                                 <img src={logo} alt='logo' className='nav_image'/>
                                             </a>
                                         </li>
@@ -29,7 +29,7 @@ function Navbar(){
                                             <a className="nav-link d-flex align-items-center" href="/stores"><b><h6 className='nav_change m-0'>STORE LOCATION</h6></b></a>
                                         </li>
                                         <li className="nav-item d-flex align-items-center">
-                                            <a className="nav-link d-flex align-items-center" href="/contact"><b><h6 className='nav_change m-0'>CONTACT US</h6></b></a>
+                                            <a className="nav-link d-flex align-items-center" href="/main/contact"><b><h6 className='nav_change m-0'>CONTACT US</h6></b></a>
                                         </li>
                                     </ul>
                                 </div>
