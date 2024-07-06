@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-//defining cityschema
 const StoreSchema = new mongoose.Schema({
     store_name: {type:String , required :true , trim: true},
     city_ref: {type: mongoose.Schema.Types.ObjectId, ref: 'cities'},

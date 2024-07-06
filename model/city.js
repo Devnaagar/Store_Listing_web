@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-//defining cityschema
 const CitySchema = new mongoose.Schema({
     city_name: {type:String , required :true , trim: true},
     country_name: {type:String , required: true , trim: true},
