@@ -1,8 +1,6 @@
-// Filename - App.js
 
 import React from "react";
 import Navbar from "./welcome/Navbar";
-
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -13,9 +11,6 @@ import Aboutus from './Aboutus';
 import Contactus from "./Contactus";
 import Store from "./Store";
 
-// import Blogs from "./pages/blogs";
-// import SignUp from "./pages/signup";
-// import Contact from "./pages/contact";
 
 function App() {
 	return (
@@ -29,10 +24,6 @@ function App() {
 					element={<Contactus />}
 				/>
 				<Route path="/stores" element={<Store />} />
-				{/* <Route
-					path="/sign-up"
-					element={<SignUp />}
-				/> */}
 			</Routes>
 		</Router>
 	);
