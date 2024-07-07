@@ -44,7 +44,4 @@ router.get('/add_store', Store.add_form);
 router.post('/store', Store.add_store);
 router.get('/stores_data',Store.display_data);
 
-
-
-
 export default router;
