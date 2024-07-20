@@ -1,11 +1,9 @@
 
 import React from "react";
 import Navbar from "./welcome/Navbar";
-import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-} from "react-router-dom";
+
+import { BrowserRouter as Router,Routes,Route,} from "react-router-dom";
+
 import Home from "./Home";
 import Aboutus from './Aboutus';
 import Contactus from "./Contactus";
