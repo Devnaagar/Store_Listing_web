@@ -67,23 +67,20 @@
     }
 
     document.getElementById("loginForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault();
 
         var email = document.getElementById("email").value;
         var password = document.getElementById("password").value;
         var rememberMe = document.getElementById("rememberMe").checked;
 
-        // Set cookies if "Remember Me" is checked
         if (rememberMe) {
-            setCookie("email", email, 30); // Cookie expires in 30 days
-            setCookie("password", password, 30); // Cookie expires in 30 days
+            setCookie("email", email, 30);
+            setCookie("password", password, 30); 
         } else {
-            // Clear cookies if "Remember Me" is not checked
-            setCookie("email", "", -1); // Expire cookie
-            setCookie("password", "", -1); // Expire cookie
+            setCookie("email", "", -1);
+            setCookie("password", "", -1); 
         }
 
-        // AJAX request for login
         fetch('/admin/', {
             method: 'POST',
             headers: {

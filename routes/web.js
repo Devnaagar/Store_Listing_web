@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
         res.render('backend/admin/login.ejs');
     }
 });
+
 router.post('/', Admin.login);
 router.get('/dashboard', Dashboard.dashboard);
 router.post('/logout', (req, res) => {

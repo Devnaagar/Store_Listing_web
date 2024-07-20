@@ -16,10 +16,7 @@ class City_Info{
     static add_city = async (req,res) =>{
         try{
             const {city_name, country_name}=req.body;
-            const doc = new CityModel({
-                city_name: city_name,
-                country_name:country_name
-            })
+            const doc = new CityModel({city_name: city_name,country_name:country_name})
             const result = await doc.save();
             res.redirect("/admin/city");
         } catch (err){
